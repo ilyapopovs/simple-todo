@@ -1,0 +1,24 @@
+.custom-checkbox input {
+    display: none;
+    }
+
+    .custom-checkbox span {
+    border: 3px solid #DFDFDF;
+    float: right;
+    height: 2rem;
+    width: 2rem;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    }
+
+    .custom-checkbox:hover span,
+    .custom-checkbox input:checked + span {
+    border: 3px solid #007BFF;
+    }
+
+    .custom-checkbox input:checked + span:before {
+    content: "✔";
+}

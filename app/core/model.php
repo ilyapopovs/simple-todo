@@ -1,6 +1,6 @@
 <?php
 class Model {
-    private $data;
+    protected $data;
     public $template;
 
     public function __construct($page){
