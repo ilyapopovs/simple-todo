@@ -2,6 +2,18 @@
 
 class ModelMain extends Model {
     public function __construct($page){
+        $this->template = "templates/template_" . $page . ".php";
+    }
+
+    public function fetchData() {
+        $this->data = $this->getAllTasks();
+        $_SESSEION['data'] = $this->data;
+    }
+
+    public function getAllTasks() {
+        // Supposed to make a call to the Database here
+        // Retruns an array of existing tasks
+
         $response_stub = [
             [
                 "id" => "1",
@@ -17,9 +29,7 @@ class ModelMain extends Model {
                 "done" => false
             ]
         ];
-
-        $this->data = $response_stub;
-        $this->template = "templates/template_" . $page . ".php";
+        return $response_stub;
     }
 }
 
