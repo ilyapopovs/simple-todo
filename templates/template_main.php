@@ -10,7 +10,7 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
         <!-- Local CSS -->
-        <link rel="stylesheet" type="text/css" href="css/style.css">.
+        <link rel="stylesheet" type="text/css" href="css/style.css">
     </head>
     <body>
         
@@ -18,7 +18,7 @@
         <?php
             // displaying each task from received data as a separate task
             // TODO: rewrite using DOM objects
-            foreach($data as $task) {
+            foreach($data as $key => $task) {
                 echo "<div class='card mx-auto my-4' style='width: 40rem;'>
                         <div class='card-body'>
                             <h4 class='card-title mb-3'>
@@ -30,7 +30,7 @@
                             <h6 class='card-subtitle mb-3 text-muted' style='margin-left: 3rem'>" . $task['date_added'] . "</h6>
                             <p class='card-text ml-5'>" . $task['description'] . "</p>
                             <div class='text-right'>
-                                <a href='#' class='btn btn-primary'> Edit </a>
+                                <a href='index.php?page=edit&id=" . ($key+1) . "' class='btn btn-primary'> Edit </a>
                             </div> 
                         </div>
                     </div>";

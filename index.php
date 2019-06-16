@@ -1,4 +1,5 @@
 <?php
+    session_start();
     // attaching parent classes
     require("app/core/model.php");
     require("app/core/controller.php");
