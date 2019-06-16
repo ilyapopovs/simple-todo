@@ -1,11 +1,9 @@
 <?php
 
 class ModelMain extends Model {
-    public function __construct($page){
-        $this->template = "templates/template_" . $page . ".php";
-    }
-
     public function fetchData() {
+        // Saves the tasks from the DB
+        // and puts them to _SESSION for later use in the Edit page
         $this->data = $this->getAllTasks();
         $_SESSEION['data'] = $this->data;
     }

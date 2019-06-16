@@ -17,7 +17,6 @@
         <h1 class="text-center mx-5 mt-5">ToDo list</h1>
         <h5 class="text-center text-muted mb-5">Editing</h3>
         <?php 
-            $task = ($_SESSION['data'])[1];
             echo "<div class='card mx-auto my-4' style='width: 40rem;'>
                         <div class='card-body'>
                             <h4 class='card-title mb-3 mt-1'>

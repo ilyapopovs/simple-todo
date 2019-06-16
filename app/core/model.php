@@ -4,7 +4,6 @@ class Model {
     public $template;
 
     public function __construct($page){
-        $this->data = "Click here to update data";
         $this->template = "templates/template_" . $page . ".php";
     }
 

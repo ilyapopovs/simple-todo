@@ -25,9 +25,14 @@
 
     // performing action if set
     if (isset($_GET['action']) && !empty($_GET['action'])) {
-        $controller->{$_GET['action']}();
+        // providing the id of the task if set
+        if (isset($_GET['id']) && !empty($_GET['id'])) {
+            $controller->{$_GET['action']}($_GET['id']);
+        } else {
+            $controller->{$_GET['action']}();
+        }
     }
-
+    
     // showing the page
     echo $view->show();
 
