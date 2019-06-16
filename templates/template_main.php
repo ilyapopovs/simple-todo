@@ -50,15 +50,15 @@
                 $then = getDate($time_input);
                 if ($now['year'] > $then['year']) {
                     $delta = $now['year'] - $then['year'];
-                    return $delta . ($delta > 1 ? " years" : " year") . " ago";
+                    return $delta > 1 ? $delta . " years ago" : "Last year";
                 } else if ($now['mon'] > $then['mon']) {
                     $delta = $now['mon'] - $then['mon'];
-                    return $delta . ($delta > 1 ? " months" : " month") . " ago";
+                    return $delta > 1 ? $delta . " months ago" : "Last month";
                 } else if ($now['mday'] > $then['mday']) {
                     $delta = $now['mday'] - $then['mday'];
                     return $delta . ($delta > 1 ? " days" : " day") . " ago";
-                } else if ($now['mday'] < $then['mday'] && $now['mon'] < $then['mon'] && $now['year'] < $then['year']) {
-                    return "In the future";
+                } else if ($now['mday'] < $then['mday'] || $now['mon'] < $then['mon'] || $now['year'] < $then['year']) {
+                    return "In the Future";
                 } else {
                     return "Today";
                 }
