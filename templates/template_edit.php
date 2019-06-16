@@ -19,7 +19,7 @@
         <?php 
             echo "<div class='card mx-auto my-4' style='width: 40rem;'>
                         <div class='card-body'>
-                            <h4 class='card-title mb-3 mt-1'>
+                            <h4 class='card-title mb-2 mt-1'>
                                 <div style='display: flex; justify-content: center;'>
                                     <div style='display: inline'>
                                     <label class='custom-checkbox mr-4' style='height: 0.5rem'>

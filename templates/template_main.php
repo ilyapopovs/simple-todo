@@ -35,7 +35,12 @@
                         </div>
                     </div>";
             }
-                        
+            echo "
+            <div class='text-right mx-auto my-5' style='width: 40rem;'>
+                <a href='index.php?page=add' class='btn btn-primary'>Add new task</a>
+            </div>
+            ";
+
         ?>
     </body>
 </html>
