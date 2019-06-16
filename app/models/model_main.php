@@ -5,7 +5,7 @@ class ModelMain extends Model {
         // Saves the tasks from the DB
         // and puts them to _SESSION for later use in the Edit page
         $this->data = $this->getAllTasks();
-        $_SESSEION['data'] = $this->data;
+        $_SESSION['data'] = $this->data;
     }
 
     public function getAllTasks() {
