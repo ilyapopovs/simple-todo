@@ -28,9 +28,9 @@
                             <div class='form-group mb-4'>
                                 <textarea id='ta_description' name='ta_description' class='form-control' rows='4' placeholder='Description'></textarea>
                             </div>
-                            <div class='text-right'>
-                                <a href='index.php?page=main' class='btn btn-secondary'> Back </a>
-                                <input type='submit' name='action_post' class='btn btn-primary' style='width:6rem' value='Add'/>
+                            <div style='display: flex; justify-content: center;'>
+                                <div class='text-left' style='width:50%'><a href='index.php?page=main' class='btn btn-secondary'> Back </a></div>
+                                <div class='text-right' style='width:50%'><input type='submit' name='action_post' class='btn btn-primary' style='width:6rem' value='Add'/></div>
                             </div> 
                         </div>
                         </div>

@@ -30,7 +30,7 @@
                             <h6 class='card-subtitle mb-3 text-muted' style='margin-left: 3rem'>" . nameDate($task['date_added']) . " (" . $task['date_added'] . ")</h6>
                             <p class='card-text ml-5'>" . $task['description'] . "</p>
                             <div class='text-right'>
-                                <a href='index.php?page=edit&action=view&id=" . ($task['id']) . "' class='btn btn-primary'> Edit </a>
+                                <a href='index.php?page=edit&action=view&id=" . ($task['id']) . "' class='btn btn-secondary' style='width:4rem'> Edit </a>
                             </div> 
                         </div>
                     </div>";
