@@ -1,6 +1,6 @@
 <?php
     session_start();
-    
+    print_r($_POST);
     // Gets DB related info from the config file and defines according constants
     // If config.ini doesn't exist - uses config_example.ini
     // WARNING: Insecure way of storing credentials
@@ -35,7 +35,7 @@
     $controller = new $controllerClass($model);
     $view = new $viewClass($controller, $model);
 
-    // performing action if set
+    // performing actions if set
     if (isset($_GET['action']) && !empty($_GET['action'])) {
         // providing the id of the task if set
         if (isset($_GET['id']) && !empty($_GET['id'])) {
@@ -43,6 +43,9 @@
         } else {
             $controller->{$_GET['action']}();
         }
+    }
+    if (isset($_POST['action_post']) && !empty($_POST['action_post'])) {
+        $controller->{strtolower($_POST['action_post'])}();
     }
 
     // showing the page
