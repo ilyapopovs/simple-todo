@@ -28,6 +28,7 @@
                                 <textarea class='form-control' id='TA_description' rows='4' placeholder='Description'></textarea>
                             </div>
                             <div class='text-right'>
+                                <a href='index.php?page=main' class='btn btn-secondary'> Back </a>
                                 <a href='index.php?page=main' class='btn btn-primary'> Add to tasks </a>
                             </div> 
                         </div>
