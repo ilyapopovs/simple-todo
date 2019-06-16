@@ -16,7 +16,7 @@
         
         <h1 class="text-center m-5">ToDo list</h1>
         <?php
-            // displaying each task from received data as a separate task
+            // displaying each task from received data as a separate card
             // TODO: rewrite using DOM objects
             foreach($data as $key => $task) {
                 echo "<div class='card mx-auto my-4' style='width: 40rem;'>
@@ -27,7 +27,7 @@
                                     <span style='font-size: 1.5rem'></span>
                                 </label>" . $task['title'] . "
                             </h4>
-                            <h6 class='card-subtitle mb-3 text-muted' style='margin-left: 3rem'>" . $task['date_added'] . "</h6>
+                            <h6 class='card-subtitle mb-3 text-muted' style='margin-left: 3rem'>" . nameDate($task['date_added']) . " (" . $task['date_added'] . ")</h6>
                             <p class='card-text ml-5'>" . $task['description'] . "</p>
                             <div class='text-right'>
                                 <a href='index.php?page=edit&action=view&id=" . ($task['id']) . "' class='btn btn-primary'> Edit </a>
@@ -40,7 +40,29 @@
                 <a href='index.php?page=add' class='btn btn-primary'>Add new task</a>
             </div>
             ";
+            
+            function nameDate($date) {
+                // Gives time difference a name
+                // Timezone mismatch possible
 
+                $now = getDate(time());
+                $time_input = strtotime($date);
+                $then = getDate($time_input);
+                if ($now['year'] > $then['year']) {
+                    $delta = $now['year'] - $then['year'];
+                    return $delta . ($delta > 1 ? " years" : " year") . " ago";
+                } else if ($now['mon'] > $then['mon']) {
+                    $delta = $now['mon'] - $then['mon'];
+                    return $delta . ($delta > 1 ? " months" : " month") . " ago";
+                } else if ($now['mday'] > $then['mday']) {
+                    $delta = $now['mday'] - $then['mday'];
+                    return $delta . ($delta > 1 ? " days" : " day") . " ago";
+                } else if ($now['mday'] < $then['mday'] && $now['mon'] < $then['mon'] && $now['year'] < $then['year']) {
+                    return "In the future";
+                } else {
+                    return "Today";
+                }
+            }
         ?>
     </body>
 </html>
