@@ -23,6 +23,11 @@ They can be found
 2. Download the source code with `git clone https://github.com/elias-po/simple-todo.git`
 3. Navigate to *simple-todo* directory and create file `config.ini`
 4. Create a database with a table (can use `dump.sql`)
-5. Place database info and credentials of the priviliged user there (like in `config_example.ini`)  
+5. Place database info and credentials of the priviliged user into `config.ini` (like in `config_example.ini`)  
+   - dblocation - database IP address
+   - username - user's username
+   - password - user's password
+   - dbname - database name
+   - dbtable - table name
 Note: thit is not a safe way of storing credentials
 6. In the browser go to \<server url\>/simple-todo
