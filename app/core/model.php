@@ -3,6 +3,7 @@ class Model {
     protected $data;
     public $template;
 
+    // setting the path for the template
     public function __construct($page){
         $this->template = "templates/template_" . $page . ".php";
     }

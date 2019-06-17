@@ -17,6 +17,7 @@
         <h1 class="text-center mx-5 mt-5">ToDo list</h1>
         <h5 class="text-center text-muted mb-5">Editing</h3>
         <?php 
+            // Builds a card for the task chosen for editing and puts the known data in place
             echo    "
                     <form method='post'>
                         <div class='card mx-auto my-4' style='width: 40rem;'>
@@ -46,18 +47,6 @@
                         </div>
                     </form>
                     ";
-
-            // returns a string with the HTML content from a DOMDocument node element ($elm)
-            function innerHTML(DOMNode $elm) { 
-                $innerHTML = ''; 
-                $children  = $elm->childNodes;
-            
-                foreach($children as $child) { 
-                    $innerHTML .= $elm->ownerDocument->saveHTML($child);
-                }
-            
-                return $innerHTML;
-            }
         
         ?>
     </body>

@@ -17,8 +17,8 @@
         
         <h1 class="text-center m-5">ToDo list</h1>
         <?php
-            // displaying each task from received data as a separate card
-            // TODO: rewrite using DOM objects
+            // Displaying each task from received data as a separate card
+            // TODO: rewrite using DOM objects?
             foreach($data as $key => $task) {
                 echo "<div class='card mx-auto my-4' style='width: 40rem;'>
                         <div class='card-body'>
@@ -42,10 +42,8 @@
             </div>
             ";
             
+            // Gives time difference a name, (Note: Timezone mismatch possible)
             function nameDate($date) {
-                // Gives time difference a name
-                // Timezone mismatch possible
-
                 $now = getDate(time());
                 $time_input = strtotime($date);
                 $then = getDate($time_input);

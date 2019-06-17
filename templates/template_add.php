@@ -16,7 +16,8 @@
         
         <h1 class="text-center mx-5 mt-5">ToDo list</h1>
         <h5 class="text-center text-muted mb-5">Adding new task</h3>
-        <?php 
+        <?php
+            // Builds a card to display input areas for the new task
             echo    "<form method='post'>
                     <div class='card mx-auto my-4' style='width: 40rem;'>
                         <div class='card-body'>
