@@ -14,8 +14,8 @@
     </head>
     <body>
         
-        <h1 class="text-center mx-5 mt-5">ToDo list</h1>
-        <h5 class="text-center text-muted mb-5">Adding new task</h3>
+        <h1 class="text-center mx-5 mt-5">Darāmo lietu saraksts</h1>
+        <h5 class="text-center text-muted mb-5">Pievienot jaunu</h3>
         <?php
             // Builds a card to display input areas for the new task
             echo    "<form method='post'>
@@ -23,15 +23,15 @@
                         <div class='card-body'>
                             <h4 class='card-title mb-4 mt-1'>
                                     <div class='form-group'>
-                                        <textarea id='ta_title' name='ta_title' class='form-control' rows='1' style='font-size: 1.5rem; color: black;' placeholder='Title' required></textarea>
+                                        <textarea id='ta_title' name='ta_title' class='form-control' rows='1' style='font-size: 1.5rem; color: black;' placeholder='Virsraksts' required></textarea>
                                     </div>
                             </h4>
                             <div class='form-group mb-4'>
-                                <textarea id='ta_description' name='ta_description' class='form-control' rows='4' placeholder='Description'></textarea>
+                                <textarea id='ta_description' name='ta_description' class='form-control' rows='4' placeholder='Apraksts'></textarea>
                             </div>
                             <div style='display: flex; justify-content: center;'>
-                                <div class='text-left' style='width:50%'><a href='index.php?page=main' class='btn btn-secondary'> Back </a></div>
-                                <div class='text-right' style='width:50%'><input type='submit' name='action_post' class='btn btn-primary' style='width:6rem' value='Add'/></div>
+                                <div class='text-left' style='width:50%'><a href='index.php?page=main' class='btn btn-secondary' style='width:9rem'>Doties atpakaļ</a></div>
+                                <div class='text-right' style='width:50%'><input type='submit' name='action_post' class='btn btn-primary' style='width:8rem' value='Pievienot'/></div>
                             </div> 
                         </div>
                         </div>

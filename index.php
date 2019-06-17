@@ -45,9 +45,20 @@
         }
     }
     if (isset($_POST['action_post']) && !empty($_POST['action_post'])) {
-        $controller->{strtolower($_POST['action_post'])}();
+        $controller->{strtolower(translatePostAction($_POST['action_post']))}();
     }
 
+    // Compatibility layer - translates Latvian to English
+    function translatePostAction($actionLv) {
+        switch($actionLv) {
+            case "Saglabāt":
+                return "Save";
+            case "Dzēst":
+                return "Delete";
+            case "Pievienot":
+                return "Add";
+        }
+    }
     // showing the page
     echo $view->show();
 

@@ -14,8 +14,8 @@
     </head>
     <body>
         
-        <h1 class="text-center mx-5 mt-5">ToDo list</h1>
-        <h5 class="text-center text-muted mb-5">Editing</h3>
+        <h1 class="text-center mx-5 mt-5">Darāmo lietu saraksts</h1>
+        <h5 class="text-center text-muted mb-5">Labot</h3>
         <?php 
             // Builds a card for the task chosen for editing and puts the known data in place
             echo    "
@@ -31,17 +31,17 @@
                                             </label>
                                         </div>
                                         <div class='form-group' style='width: 100%; display: inline;'>
-                                            <textarea id='ta_title' name='ta_title' class='form-control' rows='1' style='font-size: 1.5rem; color: black;' placeholder='Title'>" . $task['title'] . "</textarea>
+                                            <textarea id='ta_title' name='ta_title' class='form-control' rows='1' style='font-size: 1.5rem; color: black;' placeholder='Virsraksts'>" . $task['title'] . "</textarea>
                                         </div>
                                     </div>
                                 </h4>
                                 <div class='form-group mb-4'>
-                                    <textarea id='ta_description' name='ta_description' class='form-control' rows='4' placeholder='Description'>" . $task['description'] . "</textarea>
+                                    <textarea id='ta_description' name='ta_description' class='form-control' rows='4' placeholder='Apraksts'>" . $task['description'] . "</textarea>
                                 </div>
                                 <div style='display: flex; justify-content: center;'>
-                                    <div class='text-left' style='width:50%'><a href='index.php?page=main' class='btn btn-secondary' style='width:4rem'> Back </a></div>
-                                    <div class='text-right' style='width:50%'><input type='submit' name='action_post' class='btn btn-danger mr-2' value='Delete'/>
-                                    <input type='submit' name='action_post' class='btn btn-primary' value='Save' style='width:6rem'/></div>
+                                    <div class='text-left' style='width:50%'><a href='index.php?page=main' class='btn btn-secondary' style='width:9rem'>Doties atpakaļ</a></div>
+                                    <div class='text-right' style='width:50%'><input type='submit' name='action_post' class='btn btn-danger mr-2' value='Dzēst' style='width:5rem'/>
+                                    <input type='submit' name='action_post' class='btn btn-primary' value='Saglabāt' style='width:8rem'/></div>
                                 </div> 
                             </div>
                         </div>

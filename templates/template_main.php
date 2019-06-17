@@ -15,7 +15,7 @@
     </head>
     <body>
         
-        <h1 class="text-center m-5">ToDo list</h1>
+        <h1 class="text-center m-5">Darāmo lietu saraksts</h1>
         <?php
             // Displaying each task from received data as a separate card
             // TODO: rewrite using DOM objects?
@@ -31,14 +31,14 @@
                             <h6 class='card-subtitle mb-3 text-muted' style='margin-left: 3rem'>" . nameDate($task['date_added']) . " (" . $task['date_added'] . ")</h6>
                             <p class='card-text ml-5'>" . $task['description'] . "</p>
                             <div class='text-right'>
-                                <a href='index.php?page=edit&action=view&id=" . ($task['id']) . "' class='btn btn-secondary' style='width:4rem'> Edit </a>
+                                <a href='index.php?page=edit&action=view&id=" . ($task['id']) . "' class='btn btn-secondary' style='width:5rem'>Labot</a>
                             </div> 
                         </div>
                     </div>";
             }
             echo "
             <div class='text-right mx-auto' style='width: 40rem; margin-bottom: 20rem; margin-top: 2rem;'>
-                <a href='index.php?page=add' class='btn btn-primary'>Add new task</a>
+                <a href='index.php?page=add' class='btn btn-primary'>Pievienot jaunu</a>
             </div>
             ";
             
@@ -49,17 +49,17 @@
                 $then = getDate($time_input);
                 if ($now['year'] > $then['year']) {
                     $delta = $now['year'] - $then['year'];
-                    return $delta > 1 ? $delta . " years ago" : "Last year";
+                    return $delta > 1 ? "Pirms " . $delta . " gadiem" : "Pagājušajā gadā";
                 } else if ($now['mon'] > $then['mon']) {
                     $delta = $now['mon'] - $then['mon'];
-                    return $delta > 1 ? $delta . " months ago" : "Last month";
+                    return $delta > 1 ? "Pirms " . $delta . " mēnešiem" : "Pagājušajā mēnesī";
                 } else if ($now['mday'] > $then['mday']) {
                     $delta = $now['mday'] - $then['mday'];
-                    return $delta . ($delta > 1 ? " days" : " day") . " ago";
+                    return "Pirms " . $delta . ($delta > 1 ? " dienām" : " dienas");
                 } else if ($now['mday'] < $then['mday'] || $now['mon'] < $then['mon'] || $now['year'] < $then['year']) {
-                    return "In the Future";
+                    return "Nakotnē";
                 } else {
-                    return "Today";
+                    return "Šodien";
                 }
             }
         ?>
