@@ -11,6 +11,7 @@
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
         <!-- Local CSS -->
         <link rel="stylesheet" type="text/css" href="css/style.css">
+        <script src="js/checkbox.js"></script>
     </head>
     <body>
         
@@ -23,7 +24,7 @@
                         <div class='card-body'>
                             <h4 class='card-title mb-3'>
                                 <label class='custom-checkbox mr-3' style='height: 1rem'>
-                                    <input type='checkbox'" . ($task['done'] ? "checked" : "") . ">
+                                    <input type='checkbox' onclick='onCheck(" . $task['id'] . ")'" . ($task['done'] ? "checked" : "") . ">
                                     <span style='font-size: 1.5rem'></span>
                                 </label>" . $task['title'] . "
                             </h4>

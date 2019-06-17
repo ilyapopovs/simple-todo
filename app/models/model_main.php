@@ -29,6 +29,20 @@ class ModelMain extends Model {
 
         return $arrayResponse;
     }
+
+    public function updateTaskDone($taskID, $newState) {
+        //TODO: check for existing connection instead of reconnecting every time
+        $db = new mysqli(DB_LOCATION, DB_USERNAME, DB_PASSWORD, DB_NAME);
+        if ($db->connect_error) {
+            die("Connection failed: " . $db->connect_error);
+        }
+        
+        $stmt = $db->prepare("UPDATE " . DB_TABLE . " SET done = ? WHERE id = ?");
+        $stmt->bind_param("ii", $newState, $taskID);
+        $stmt->execute();
+        $stmt->close();
+        $db->close();
+    }
 }
 
 ?>
