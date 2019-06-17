@@ -41,7 +41,6 @@ class ModelEdit extends Model {
         $stmt->execute();
         $stmt->close();
         $db->close();
-        header("Location: index.php");
     }
 }
 

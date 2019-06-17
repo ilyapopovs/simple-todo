@@ -14,7 +14,7 @@ class ControllerMain extends Controller {
         }
         $newState = $task['done'] ? 0 : 1;
         $this->model->updateTaskDone($taskID, $newState);
-        echo "<script>window.location = 'index.php?&page_y=". $_SESSION['page_y'] ."'</script>";
+        echo "<script>window.location = 'index.php'</script>";
     }
 }
 

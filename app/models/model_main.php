@@ -18,6 +18,7 @@ class ModelMain extends Model {
             die("Connection failed: " . $db->connect_error);
         }
 
+        $arrayResponse = NULL;
         $sql = "SELECT * FROM " . DB_TABLE;
         if($result = $db->query($sql)) {
             while($row = mysqli_fetch_array($result, MYSQLI_ASSOC)) {

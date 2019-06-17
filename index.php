@@ -1,6 +1,6 @@
 <?php
     session_start();
-    print_r($_POST);
+    
     // Gets DB related info from the config file and defines according constants
     // If config.ini doesn't exist - uses config_example.ini
     // WARNING: Insecure way of storing credentials

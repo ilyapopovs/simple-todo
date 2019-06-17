@@ -15,6 +15,7 @@ class ControllerEdit extends Controller {
         $updatedTask['title'] = $_POST['ta_title'];
         $updatedTask['description'] = $_POST['ta_description'];
         $this->model->updateTask($updatedTask);
+        header("Location: index.php");
     }
 }
 
